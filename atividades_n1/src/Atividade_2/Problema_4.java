@@ -86,7 +86,7 @@ public class Problema_4 {
         System.out.println("Votos candidato '4':"+ c4 +". Sua porcentagem é:"  + String.format("%.2f", calcularPorcentagem(c4, total_votos)) +"%");
         System.out.println("Votos nulos:"+ v_nulos +". Sua porcentagem é:"  + String.format("%.2f", calcularPorcentagem(v_nulos, total_votos)) +"%");
         System.out.println("Votos em branco:"+ v_brancos +". Sua porcentagem é:"  + String.format("%.2f", calcularPorcentagem(v_brancos, total_votos)) +"%");
-
+        System.out.println("Votos nulos e brancos:"+ (v_nulos +v_brancos) +". Sua porcentagem é:"  + String.format("%.2f", calcularPorcentagem(v_nulos+v_brancos, total_votos)) +"%");
         
         //System.out.println("Porcentagem votos nulos e brancos:"+ nulos_brancos_porcentagem);
         
