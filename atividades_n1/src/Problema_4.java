@@ -18,7 +18,7 @@ public class Problema_4 {
                 System.out.println(pontuacao);
                 
             }else {
-                pontuacao =3;
+                pontuacao = 3;
                 System.out.println(pontuacao);
             }
             

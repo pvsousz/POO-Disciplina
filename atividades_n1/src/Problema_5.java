@@ -11,7 +11,8 @@ public class Problema_5 {
        int zhao = scanner.nextInt();
        System.out.println("Digite a em qual chave Liu estará:");
        int liu = scanner.nextInt();
-
+       scanner.close();
+    
 
        if (zhao/8 != liu/8) {
         System.out.println("Final");
