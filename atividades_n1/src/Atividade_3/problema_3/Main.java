@@ -9,13 +9,10 @@ public class Main {
         
         
         
-       
-        System.out.println(voo.ocuparPoltrona(1));
-        System.out.println(voo.ocuparPoltrona(1));
-        voo.ocuparPoltrona(2);
-        System.out.println(voo.verificarPoltrona(1));
-        System.out.println(voo.retornarVagas());
-        voo.ocuparPoltrona(100);
+        System.out.println("Número de voo: " + voo.getNumero());
+        System.out.println("Data do voo: " + voo.getData());
+        System.out.println("Poltrona: " + voo.ocuparPoltrona(3));
+        System.out.println("Poltronas livres: " + voo.retornarVagas());
         
     }
 }

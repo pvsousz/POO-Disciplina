@@ -17,8 +17,8 @@ public class Voo {
     }
 
     public int retornarVagas(){
-        int vagas =0;
-        for(boolean ocupada: poltronas){
+        int vagas = 0;
+        for(boolean ocupada: this.poltronas){
             if (!ocupada) {
                 vagas++;                
             }
@@ -27,8 +27,8 @@ public class Voo {
     }
 
     public int proximoLivre() {
-        for (int i = 0; i < poltronas.length; i++) {
-            if (!poltronas[i]) {
+        for (int i = 0; i < this.poltronas.length; i++) {
+            if (!this.poltronas[i]) {
                 return i +1;
             }
         }
@@ -39,14 +39,14 @@ public class Voo {
         if (poltrona <1 || poltrona > 100) {
             System.out.println("Número da poltrona indisponível");
         }
-        return poltronas[poltrona -1];
+        return this.poltronas[poltrona -1];
     }
 
     public boolean ocuparPoltrona(int poltrona){
         if (verificarPoltrona(poltrona)){
             return false;
         }
-        poltronas[poltrona  -1] = true;
+        this.poltronas[poltrona  -1] = true;
         return true;
     }
 
@@ -68,7 +68,6 @@ public class Voo {
     }
 
 
-
     public void setData(LocalDate data) {
         this.data = data;
     }
@@ -76,13 +75,20 @@ public class Voo {
 
 
     public boolean[] getPoltronas() {
-        return poltronas;
+        return this.poltronas;
     }
+
 
 
 
     public void setPoltronas(boolean[] poltronas) {
         this.poltronas = poltronas;
+    }
+
+    public void resetar(){
+        for (int i = 0; i < poltronas.length; i++) {
+            poltronas[i] = false;
+        }
     }
 
 
