@@ -96,7 +96,7 @@ public class App {
             System.out.println("Ano do livro:");
             Year ano = Year.of(scanner.nextInt());
 
-            scanner.nextLine(); //Limpar o buffer
+            scanner.nextLine();
 
             System.out.println("Editora:");
             String editoralivro = scanner.nextLine();
@@ -113,7 +113,6 @@ public class App {
 
     }
 
-
     public static void realizarEmprestimo() {
         
         System.out.println("Escolha um livro para o empréstimo:");
@@ -129,7 +128,6 @@ public class App {
             return;
         }
     
-        
         System.out.println("Digite o seu nome para realizar o empréstimo:");
         String nomePessoa = scanner.nextLine();
     
@@ -141,7 +139,6 @@ public class App {
                 break;
             }
         }
-    
         if (pessoa == null) {
             System.out.println("Pessoa não cadastrada. Empréstimo não realizado.");
         } else {

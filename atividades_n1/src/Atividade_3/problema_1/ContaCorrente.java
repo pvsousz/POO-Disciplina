@@ -53,6 +53,7 @@ public class ContaCorrente {
         this.saldo = valor;
     }
 
+
     public void transferir(ContaCorrente destino, double valor){
         if (this.saldo >= valor) {
             this.saldo = this.saldo - valor;
@@ -64,14 +65,28 @@ public class ContaCorrente {
     }
 
     public void sacarSaldo(double valor){
-        if (this.saldo >= valor) {
-            this.saldo = this.saldo - valor;
-            System.out.println("Saque realizado com sucesso!!!");
+        if (this.saldo <= valor) {
+            throw new IllegalArgumentException("Saldo insuficiente");
 
         }else{
-            System.out.println("Saldo insuficiente!!!");
+            this.saldo = this.saldo - valor;
         }
     }
+    public void depositarSaldo(double valor){
+        this.saldo = this.saldo + valor;
+    }
+
+    public void transferirSaldo(ContaCorrente destino, double valor){
+        if (this.saldo >= valor) {
+            this.saldo = this.saldo - valor;
+            destino.saldo = destino.saldo +valor;
+        }else{
+            System.out.println("Saldo insuficiente");
+        }
+
+    }
+
+
 
     @Override
     public String toString() {
